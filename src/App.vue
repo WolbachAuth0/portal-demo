@@ -1,12 +1,12 @@
 <template>
 	<v-app id="app">
 		<navigation></navigation>
-				
+		
 		<v-fade-transition mode="out-in" duration type="animation">
 			<v-main>		
 				<v-container fluid>
 					<v-layout align-center justify-center>
-						<v-flex md10 sm12>
+						<v-flex>
         			<router-view :key="$route.fullPath"></router-view>
 						</v-flex>
 					</v-layout>
