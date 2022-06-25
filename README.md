@@ -1,16 +1,7 @@
 
-# Multi-Organization Manager Demonstration Application
+# Auth0 + MEVN Stack Scaffold Application
 
-The Multi-Organization Manager is meant to demonstrate the capabilities of the Auth0 platform to allow users to
-manage their own organizaitons. In the past, this has been a common ask from Auth0's customers. The intent is
-to provide an example appliction which permits organization managers to manage the following for their specific
-organization;
-
-    1. Branding (names, colors, logos)
-    2. Organization metadata
-    3. Members (user roles, invitations)
-    4. Connections (databases, social connectors, enterprise connections)
-    5. Multi-factor options
+This is a quick start app that has a simple Vue.js front-end and a Node.js Express REST API in a single project. The app is already scaffolded to use Auth0 for authentication and authorization.
 
 Since this application is NOT intended to be a production application, but is instead an example app to be shown
 to potential developers, there is also a "debug" page that shows the content of ID and Access Tokens for authenticated
@@ -49,6 +40,7 @@ The `.env` file contains values which are present in every environment. It must 
 
 ```txt
 # values present in vue application
+VUE_APP_TITLE=<The title of your application>
 VUE_APP_AUTH0_CLIENT_ID=<auth0-client-id-of-org-manager-spa>
 VUE_APP_AUTH0_DOMAIN=<auth0-tenant-domain>
 VUE_APP_AUTH0_AUDIENCE=<identifier-of-auth0-org-manager-api>
@@ -70,9 +62,6 @@ VUE_APP_DOMAIN=<base-url-for-vue-app-in-environment>
 ```
 
 ## Demo
-
-A demonstration of this application is live [here](https://multi-org-manager.herokuapp.com/). But you'll need an 
-invitation from one of the Organization's manager's to login.
 
 To host a version of this applicaion on your own local machine, make sure that your Auth0 tenant is setup and that your
 environment files are correct. To start the Vue.js application locally, run
