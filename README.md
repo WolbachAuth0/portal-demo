@@ -11,8 +11,8 @@ users of the application.
 
     1. Clone this repository
 ```bash
-git clone https://github.com/WolbachAuth0/multi-org-manager
-cd multi-org-manager
+git clone https://github.com/WolbachAuth0/portal-demo
+cd portal-demo
 ```
 
     2. Install dependencies with npm
@@ -41,9 +41,9 @@ The `.env` file contains values which are present in every environment. It must 
 ```txt
 # values present in vue application
 VUE_APP_TITLE=<The title of your application>
-VUE_APP_AUTH0_CLIENT_ID=<auth0-client-id-of-org-manager-spa>
+VUE_APP_AUTH0_CLIENT_ID=<auth0-client-id-of-portal-demo-spa>
 VUE_APP_AUTH0_DOMAIN=<auth0-tenant-domain>
-VUE_APP_AUTH0_AUDIENCE=<identifier-of-auth0-org-manager-api>
+VUE_APP_AUTH0_AUDIENCE=<identifier-of-auth0-portal-demo-api>
 
 # values present in api-server application
 # client-id + secret of M2M integration with Auth0 management api
