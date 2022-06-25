@@ -14,17 +14,15 @@ const httpCodes = {
   501: { success: false, text: 'NOT IMPLEMENTED' },
 }
 
-module.exports = function (req, res, { status, message, data }) {
+module.exports = function (req, res, { status, data }) {
   status = httpCodes.hasOwnProperty(status) ? status : 500
   const stat = httpCodes[status]
   const response = {
     method: req.method.toUpperCase(),
-    controler: this.name,
     resource: req.baseUrl || '/',
     success: stat.success,
     status,
     statusText: stat.text,
-    message,
     data
   }
   return response

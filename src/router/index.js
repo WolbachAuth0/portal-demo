@@ -6,6 +6,7 @@ import Meta from 'vue-meta'
 // Views
 import Home from '@/views/Home.vue'
 import Debug from '@/views/Debug.vue'
+import Portal from '@/views/Portal.vue'
 
 Vue.use(Meta, {
 	keyName: 'metaInfo',
@@ -20,7 +21,8 @@ const router = new Router({
   base: process.env.BASE_URL,
   routes: [
     { path: '/', name: 'Welcome', component: Home },
-    { path: '/debug', name: 'Debug', component: Debug, beforeEnter: authenticationGuard }
+    { path: '/debug', name: 'Debug', component: Debug, beforeEnter: authenticationGuard },
+    { path: '/portal', name: 'Portal', component: Portal, beforeEnter: authenticationGuard }
   ]
 })
 
