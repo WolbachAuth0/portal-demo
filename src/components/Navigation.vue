@@ -84,6 +84,7 @@
 import {
 	mdiCogOutline,
 	mdiHomeCircle,
+	mdiApplicationParenthesesOutline,
 	mdiLogoutVariant,
 	mdiLoginVariant,
 	mdiAccountCircle, 
@@ -95,13 +96,14 @@ export default {
 		appTitle: process.env.VUE_APP_TITLE,
 		shieldSRC: 'https://cdn.auth0.com/manhattan/versions/1.3435.0/assets/./badge.png',
 		shield: require('../assets/shield.svg'),
-		auth0docs: require('../assets/auth0docs.svg')
+		auth0docs: require('../assets/auth0docs.svg'),
 	}),
 	computed: {
 		routes() {
 			let routes = [
-				{ title: 'Home', icon: mdiHomeCircle , to: '/', auth: false },
-				{ title: 'Debug', icon: mdiCogOutline , to: '/debug', auth: true }
+				{ title: 'Home', icon: mdiHomeCircle, to: '/', auth: false },
+				{ title: 'Debug', icon: mdiCogOutline, to: '/debug', auth: true },
+				{ title: 'Portal', icon: mdiApplicationParenthesesOutline, to: '/portal', auth: true }
 			]
 			return this.$auth.isAuthenticated ? routes : routes.filter(x => !x.auth)
 		},
