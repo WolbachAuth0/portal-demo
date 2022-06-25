@@ -1,7 +1,7 @@
 <template>
   <v-card dark>
     <v-card-title>
-      Auth0 Portal Demo
+      {{ appTitle }}
     </v-card-title>
 
   </v-card>
@@ -15,6 +15,7 @@ export default {
   },
   data () {
     return {
+      appTitle: process.env.VUE_APP_TITLE,
       tab: null,
       selectedOrg: 0,
       organizations: []

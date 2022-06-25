@@ -7,7 +7,7 @@
 			</v-btn>
 			
       <v-toolbar-title >
-				Auth0 Portal Demo
+				{{ appTitle }}
 			</v-toolbar-title>
 
 			<v-spacer></v-spacer>
@@ -92,6 +92,7 @@ import {
 export default {
 	name: 'Navigation',
 	data: () => ({
+		appTitle: process.env.VUE_APP_TITLE,
 		shieldSRC: 'https://cdn.auth0.com/manhattan/versions/1.3435.0/assets/./badge.png',
 		shield: require('../assets/shield.svg'),
 		auth0docs: require('../assets/auth0docs.svg')

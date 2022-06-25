@@ -29,7 +29,7 @@ export default {
 		Navigation
 	},
 	metaInfo: {
-		titleTemplate: 'Organization Manager | %s'
+		titleTemplate: `${process.env.VUE_APP_TITLE} | %s`
 	},
 	data() {
 		return {
