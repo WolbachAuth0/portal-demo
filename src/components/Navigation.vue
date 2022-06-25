@@ -7,7 +7,7 @@
 			</v-btn>
 			
       <v-toolbar-title >
-				Organization Manager Experiment
+				Auth0 Portal Demo
 			</v-toolbar-title>
 
 			<v-spacer></v-spacer>
@@ -84,7 +84,6 @@
 import {
 	mdiCogOutline,
 	mdiHomeCircle,
-	mdiMonitorDashboard,
 	mdiLogoutVariant,
 	mdiLoginVariant,
 	mdiAccountCircle, 
@@ -101,7 +100,6 @@ export default {
 		routes() {
 			let routes = [
 				{ title: 'Home', icon: mdiHomeCircle , to: '/', auth: false },
-				{ title: 'Dashboard', icon: mdiMonitorDashboard , to: '/dashboard', auth: true },
 				{ title: 'Debug', icon: mdiCogOutline , to: '/debug', auth: true }
 			]
 			return this.$auth.isAuthenticated ? routes : routes.filter(x => !x.auth)

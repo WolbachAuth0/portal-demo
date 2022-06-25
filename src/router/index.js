@@ -5,7 +5,6 @@ import Meta from 'vue-meta'
 
 // Views
 import Home from '@/views/Home.vue'
-import Dashboard from '@/views/Dashboard.vue'
 import Debug from '@/views/Debug.vue'
 
 Vue.use(Meta, {
@@ -21,7 +20,6 @@ const router = new Router({
   base: process.env.BASE_URL,
   routes: [
     { path: '/', name: 'Welcome', component: Home },
-    { path: '/dashboard', name: 'Dashboard', component: Dashboard, beforeEnter: authenticationGuard },
     { path: '/debug', name: 'Debug', component: Debug, beforeEnter: authenticationGuard }
   ]
 })

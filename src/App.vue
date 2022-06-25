@@ -1,19 +1,7 @@
 <template>
 	<v-app id="app">
 		<navigation></navigation>
-		
-		<announcer :visible="alert.visible"
-							 :text="alert.text"
-							 :type="alert.type"
-							 :top="alert.top"
-							 :right="alert.right"
-							 :left="alert.left"
-							 @show="show"
-							 @hide="hide"
-		></announcer>
-
-		<youtube-background></youtube-background>
-		
+				
 		<v-fade-transition mode="out-in" duration type="animation">
 			<v-main>		
 				<v-container fluid>
@@ -33,31 +21,18 @@
 </template>
 
 <script>
-import Announcer from './components/Announcer.vue'
 import Navigation from './components/Navigation.vue'
-import YoutubeBackground from './components/YoutubeBackground.vue'
-import EventBus from './helpers/eventBus.js'
 
 export default {
 	name: 'app',
 	components: {
-		Announcer,
-		Navigation,
-		YoutubeBackground
+		Navigation
 	},
 	metaInfo: {
 		titleTemplate: 'Organization Manager | %s'
 	},
 	data() {
 		return {
-			alert: {
-        visible: false,
-        text: '',
-        type: 'success',
-				top: true,
-				right: true,
-				left: false
-      }
 		}
 	},
 	mounted() {
@@ -69,28 +44,9 @@ export default {
 			console.log('vue app domain: ', process.env.VUE_APP_DOMAIN)
 			console.log('vue app audience: ', process.env.VUE_APP_AUTH0_AUDIENCE)
 		}
-		EventBus.$on('announce', this.makeAnnouncement)
 	},
 	methods: {
-		makeAnnouncement ({ text='announcement text', type='success', top=true, right=true, left=false }) {
-			this.alert.text = text
-			this.alert.type = type
-			this.alert.top = top
-			this.alert.right = right
-			this.alert.left = left
-
-			this.alert.visible = true
-
-			if (process.env.VUE_APP_MODE === 'development') {
-				console.log('announcer event: payload = ', this.alert)
-			}
-		},
-		show (payload) {
-			this.alert.visible = true
-		},
-		hide (payload) {
-			this.alert.visible = false
-		}
 	}
 }
 </script>
+
