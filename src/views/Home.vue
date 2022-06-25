@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <v-card dark>
     <v-card-title>
       Auth0 Portal Demo
     </v-card-title>
