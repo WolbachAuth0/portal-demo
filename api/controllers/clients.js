@@ -1,6 +1,9 @@
 const responseFormatter = require('./../middleware/responseFormatter')
 const scopes = [
-  'read:roles',
+  'read:clients',
+  'read:client_keys',
+  'read:client_credentials',
+  'read:client_summary'
 ]
 const management = require('./../models/management')(scopes)
 
@@ -42,7 +45,8 @@ async function list (req, res) {
 async function getByID (req, res) {
   try {
     const client_id = req.params.client_id
-    const client = await management.clients.get({ client_id })
+    const fields = 'client_id, name, description, app_type'
+    const data = await management.clients.get({ client_id, fields })
     const payload = {
       status: 200,
       data 
@@ -53,3 +57,4 @@ async function getByID (req, res) {
     handleError(req, res, error)
   }
 }
+
