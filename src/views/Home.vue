@@ -30,6 +30,12 @@ export default {
       console.log(orgs)
     }
   },
+  async change () {
+    if (this.$auth.isAuthenticated) {
+      const accesstoken  = await this.$auth.getTokenSilently()
+      console.log(accesstoken)
+    }
+  },
   methods: {
     async getOrganizations () {
       const response = await this.$http(null).get(`/organizations`)
