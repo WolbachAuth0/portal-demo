@@ -122,6 +122,9 @@ export default {
 				// https://auth0.github.io/auth0-spa-js/interfaces/logoutoptions.html
 				this.$auth.logout({ returnTo: process.env.VUE_APP_DOMAIN })
         this.$router.push({ path: '/' })
+
+				const accesstoken  = await this.$auth.getTokenSilently()
+				console.log(accesstoken)
 			} else {
 				// https://auth0.github.io/auth0-spa-js/interfaces/redirectloginoptions.html
 				const scopes = [ 'openid', 'profile', 'email' ]
