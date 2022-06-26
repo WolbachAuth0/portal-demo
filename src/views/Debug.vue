@@ -121,6 +121,10 @@ export default {
     }
   },
   async beforeMount() {
+    if (process.env.VUE_APP_MODE === 'development') {
+      console.log('Debug:beforeMount')
+    }
+
     // get the raw id token
     const claims = await this.$auth.getIdTokenClaims()
     this.idToken = {
