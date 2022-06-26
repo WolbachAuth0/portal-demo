@@ -2,7 +2,7 @@ const { cli } = require('winston/lib/winston/config')
 const responseFormatter = require('./../middleware/responseFormatter')
 const scopes = [
   'read:clients',
-  'read:client_keys',
+  // 'read:client_keys',
   // 'read:client_credentials',
   // 'read:client_summary'
 ]
@@ -31,8 +31,9 @@ function formatClient(client) {
     tenant: client.tenant,
     name: client.name,
     logo_uri: client.logo_uri,
-    allowed_clients: client.allowed_clients,
-    callbacks: client.callbacks,
+    // allowed_clients: client.allowed_clients,
+    // callbacks: client.callbacks,
+    client_metadata: client.client_metadata
   }
 }
 
