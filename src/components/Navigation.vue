@@ -84,7 +84,7 @@
 import {
 	mdiCogOutline,
 	mdiHomeCircle,
-	mdiApplicationParenthesesOutline,
+	// mdiApplicationParenthesesOutline,
 	mdiLogoutVariant,
 	mdiLoginVariant,
 	mdiAccountCircle, 
