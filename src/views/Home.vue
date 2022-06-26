@@ -4,15 +4,22 @@
       {{ appTitle }}
     </v-card-title>
 
-    <v-card-text v-if="!$auth.isAuthenticated">
-      Login into the portal app to access your third party applications.
-    </v-card-text>
-    <v-card-subtitle v-else>
+    <v-card-subtitle v-if="$auth.isAuthenticated">
       <v-avatar>
         <img :src="$auth.user.picture" :alt="$auth.user.name">
       </v-avatar>
-      Welcome {{ $auth.user.name }}!
+      Welcome {{ $auth.user.nickname }}!
     </v-card-subtitle>
+    <v-card-subtitle v-else>
+      Please Login
+    </v-card-subtitle>
+
+    <v-card-text v-if="$auth.isAuthenticated">
+      User ({{ $auth.user.email}}) has access to the following applications.
+    </v-card-text>
+    <v-card-text v-else>
+      In order to access a user's assigned applications, the must first login to the portal application.
+    </v-card-text>
 
     <v-container fluid v-if="$auth.isAuthenticated">
       <v-row dense>
