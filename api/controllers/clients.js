@@ -1,9 +1,10 @@
+const { cli } = require('winston/lib/winston/config')
 const responseFormatter = require('./../middleware/responseFormatter')
 const scopes = [
   'read:clients',
   'read:client_keys',
-  'read:client_credentials',
-  'read:client_summary'
+  // 'read:client_credentials',
+  // 'read:client_summary'
 ]
 const management = require('./../models/management')(scopes)
 
@@ -23,6 +24,18 @@ function handleError (req, res, error) {
   res.status(payload.status).json(json)
 }
 
+function formatClient(client) {
+  return {
+    client_id: client.client_id,
+    app_type: client.app_type,
+    tenant: client.tenant,
+    name: client.name,
+    logo_uri: client.logo_uri,
+    allowed_clients: client.allowed_clients,
+    callbacks: client.callbacks,
+  }
+}
+
 // roles
 async function list (req, res) {
   try {
@@ -33,7 +46,7 @@ async function list (req, res) {
     const data = await management.clients.getAll(options)
     const payload = {
       status: 200,
-      data 
+      data: data.map(formatClient)
     }
     const json = responseFormatter(req, res, payload)
     res.status(payload.status).json(json)
@@ -45,11 +58,10 @@ async function list (req, res) {
 async function getByID (req, res) {
   try {
     const client_id = req.params.client_id
-    const fields = 'client_id, name, description, app_type'
-    const data = await management.clients.get({ client_id, fields })
+    const data = await management.clients.get({ client_id })
     const payload = {
       status: 200,
-      data 
+      data: formatClient(data)
     }
     const json = responseFormatter(req, res, payload)
     res.status(payload.status).json(json)
@@ -57,4 +69,3 @@ async function getByID (req, res) {
     handleError(req, res, error)
   }
 }
-
