@@ -6,10 +6,10 @@ module.exports = router
 
 router
   .route('/:client_id')
-  // .all(verifyJWT)
+  .all(verifyJWT)
   .get(controller.getByID)
 
 router
   .route('/')
-  // .all(verifyJWT)
+  .all(verifyJWT)
   .get(controller.list)
