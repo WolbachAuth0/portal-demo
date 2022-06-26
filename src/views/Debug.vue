@@ -32,7 +32,7 @@
 
               <v-col cols="6">
                 <pre class="json" v-if="showIDToken">
-                  {{ userJSON | pretty }}
+{{ userJSON | pretty }}
                 </pre>
               </v-col>
             </v-row>
@@ -69,7 +69,7 @@
               </v-col>
 
               <v-col cols="6">
-                <pre class="json" v-if="showAccessToken">{{ tokenJSON | pretty }}</pre>
+<pre class="json" v-if="showAccessToken">{{ tokenJSON | pretty }}</pre>
               </v-col>
             </v-row>
           </v-card>
