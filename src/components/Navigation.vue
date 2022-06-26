@@ -103,7 +103,7 @@ export default {
 		routes() {
 			let routes = [
 				{ title: 'Home', icon: mdiHomeCircle, to: '/', auth: false },
-				{ title: 'Debug', icon: mdiCogOutline, to: '/debug', auth: true }
+				{ title: 'Tokens', icon: mdiCogOutline, to: '/debug', auth: true }
 			]
 			return this.$auth.isAuthenticated ? routes : routes.filter(x => !x.auth)
 		},

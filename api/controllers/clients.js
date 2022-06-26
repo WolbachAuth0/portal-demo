@@ -1,10 +1,6 @@
-const { cli } = require('winston/lib/winston/config')
 const responseFormatter = require('./../middleware/responseFormatter')
 const scopes = [
-  'read:clients',
-  // 'read:client_keys',
-  // 'read:client_credentials',
-  // 'read:client_summary'
+  'read:clients'
 ]
 const management = require('./../models/management')(scopes)
 
