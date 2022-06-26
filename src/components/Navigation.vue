@@ -3,7 +3,7 @@
 		<!-- Application bar -->
 		<v-app-bar app clipped-left dark>
 			<v-btn plain float-left max-height="50" href="https://auth0.com/" target="__blank">
-				<v-img :src="shield" contain max-height="40"></v-img>
+				<v-img :src="logo" contain max-height="50"></v-img>
 			</v-btn>
 			
       <v-toolbar-title >
@@ -95,7 +95,8 @@ export default {
 	data: () => ({
 		appTitle: process.env.VUE_APP_TITLE,
 		shieldSRC: 'https://cdn.auth0.com/manhattan/versions/1.3435.0/assets/./badge.png',
-		shield: require('../assets/shield.svg'),
+		logo: require('../assets/shield.svg'),
+		// logo: require('../assets/okta-auth0-logo.svg'),
 		auth0docs: require('../assets/auth0docs.svg'),
 	}),
 	computed: {

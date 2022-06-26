@@ -7,10 +7,12 @@ Vue.use(Vuetify);
 export default new Vuetify({
   theme: {
     dark: false,
+    default: true,
+    light: false,
     themes: {
       dark: {
         background: colors.grey.darken2,
-        surface: colors.grey.darken3,
+        surface: colors.grey,
         primary: colors.blue.lighten3,
         secondary: colors.blueGrey.darken2,
         info: colors.blueGrey.lighten3,
@@ -30,6 +32,15 @@ export default new Vuetify({
         // warning: colors.yellow,
         // error: colors.red.darken3,
       },
+      default: {
+        primary: '#1976D2',
+        secondary: '#424242',
+        accent: '#82B1FF',
+        error: '#FF5252',
+        info: '#2196F3',
+        success: '#4CAF50',
+        warning: '#FFC107',
+      }
     }
   },
   icons: {
