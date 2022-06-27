@@ -4,8 +4,7 @@
 This is a quick start app that has a simple Vue.js front-end and a Node.js Express REST API in a single project. The app is already scaffolded to use Auth0 for authentication and authorization.
 
 Since this application is NOT intended to be a production application, but is instead an example app to be shown
-to potential developers, there is also a "debug" page that shows the content of ID and Access Tokens for authenticated
-users of the application.
+to potential developers, there is also a "debug" page that shows the content of ID and Access Tokens for authenticated users of the application.
 
 ## Installation
 
@@ -20,7 +19,7 @@ cd portal-demo
 npm install
 ```
 
-    3. In the Auth0 tenant that you wish to deploy your Multi-Org Manager application, you must perform the
+    3. In the Auth0 tenant that you wish to deploy your application, you must perform the
 following tasks. This can be done manually (e.g. via the Auth0 dashboard) or programatically (e.g with a deploy CLI).
 
 ## Environment Variables
@@ -63,8 +62,7 @@ VUE_APP_DOMAIN=<base-url-for-vue-app-in-environment>
 
 ## Demo
 
-To host a version of this applicaion on your own local machine, make sure that your Auth0 tenant is setup and that your
-environment files are correct. To start the Vue.js application locally, run
+To host a version of this applicaion on your own local machine, make sure that your Auth0 tenant is setup and that your environment files are correct. Then, to start the Vue.js application locally, run
 ```bash
 npm run dev-front
 ```
