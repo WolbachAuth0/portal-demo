@@ -65,9 +65,6 @@ export default {
     },
     toggleShowJSON() {
       this.showJSON = !this.showJSON
-    },
-    navigate () {
-      window.location.href = this.deployment_url
     }
   }
 
