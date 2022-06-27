@@ -18,7 +18,7 @@
 
     <v-card-text v-if="showJSON">
       <pre class="json">
-        {{ JSON.stringify(data) | pretty }}
+{{ JSON.stringify(data) | pretty }}
       </pre>
     </v-card-text>
   </v-card>
@@ -53,8 +53,15 @@ export default {
       this.app_type = response.data.app_type
       this.tenant = response.data.tenant
       this.name = response.data.name
-      this.logo_uri = response.data.logo_uri
-      this.deployment_url = response.data.client_metadata.deployment_url
+
+      if (this.app_type == 'salesforce') {
+        this.logo_uri = 'https://www.vectorlogo.zone/logos/salesforce/salesforce-icon.svg'
+        this.deployment_url = 'https://okta-43b-dev-ed.lightning.force.com/lightning/page/home'
+      } else {
+        this.logo_uri = response.data?.logo_uri
+        this.deployment_url = response.data?.client_metadata?.deployment_url
+      }
+      
     }
   },
   methods: {
