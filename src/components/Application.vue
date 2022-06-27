@@ -8,7 +8,7 @@
     </v-card-title>
 
     <v-card-actions>
-      <v-btn class="primary" :href="deployment_url">Login</v-btn>
+      <v-btn class="primary" :href="deployment_url" target="_blank">Login</v-btn>
       <v-btn class="secondary" @click="toggleShowJSON(clientID)">
         {{ showJSON ? `Hide App Data` : `Show App Data` }}
       </v-btn>
@@ -65,6 +65,9 @@ export default {
     },
     toggleShowJSON() {
       this.showJSON = !this.showJSON
+    },
+    navigate () {
+      window.location.href = this.deployment_url
     }
   }
 
