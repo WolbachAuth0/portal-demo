@@ -1,26 +1,24 @@
 
-# Auth0 + MEVN Stack Scaffold Application
+# Auth0 SSO Portal Demo Application
 
-This is a quick start app that has a simple Vue.js front-end and a Node.js Express REST API in a single project. The app is already scaffolded to use Auth0 for authentication and authorization.
+This is a single page application that has a Vue.js front-end and a Node.js Express REST API in a single project. The app is already scaffolded to use Auth0 for authentication and authorization. This application is NOT intended to be a production application, but is instead an example app to be shown to potential developers.
 
-Since this application is NOT intended to be a production application, but is instead an example app to be shown
-to potential developers, there is also a "debug" page that shows the content of ID and Access Tokens for authenticated users of the application.
+[live-application](https://auth0-portal-demo.herokuapp.com/)
 
 ## Installation
 
-    1. Clone this repository
+1. Clone this repository
 ```bash
 git clone https://github.com/WolbachAuth0/portal-demo
 cd portal-demo
 ```
 
-    2. Install dependencies with npm
+2. Install dependencies with npm
 ```bash
 npm install
 ```
 
-    3. In the Auth0 tenant that you wish to deploy your application, you must perform the
-following tasks. This can be done manually (e.g. via the Auth0 dashboard) or programatically (e.g with a deploy CLI).
+3. In the Auth0 tenant that you wish to deploy your application, you must perform the following tasks. This can be done manually (e.g. via the Auth0 dashboard) or programatically (e.g with a deploy CLI).
 
 ## Environment Variables
 
