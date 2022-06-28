@@ -54,7 +54,7 @@ export default {
       this.tenant = response.data.tenant
       this.name = response.data.name
       this.logo_uri = response.data.logo_uri
-      this.deployment_url = response.data.deployment_url    
+      this.deployment_url = response.data.client_metadata.deployment_url    
     }
   },
   methods: {
