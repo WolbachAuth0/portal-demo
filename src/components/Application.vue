@@ -52,7 +52,9 @@ export default {
       this.data = response.data
       this.app_type = response.data.app_type
       this.tenant = response.data.tenant
-      this.name = response.data.name     
+      this.name = response.data.name
+      this.logo_uri = response.data.logo_uri
+      this.deployment_url = response.data.deployment_url    
     }
   },
   methods: {
