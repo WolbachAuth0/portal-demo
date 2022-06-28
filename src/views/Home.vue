@@ -40,7 +40,9 @@
         There are three applications which this portal app behaves as a gateway. These apps are primarily examples
         just to demonstrate logging in and logging out. With the exception of the Salesforce SSO application, the 
         apps don't do anything dangerous. The Salesforce SSO application is here to demonstrate the capability of
-        Auth0 to behave as a SAML identity provider (IdP) into third party SaaS applications.
+        Auth0 to behave as a SAML identity provider (IdP) into third party SaaS applications. Please note that each
+        of these applications is deployed on a free-tier of Heroku. As such, it may take a moment for them to spin up
+        if they haven't been accessed in the last 20 minutes.
       </v-card-text>
 
       <v-list-item two-line v-for="app in applications" :key="app.name">
