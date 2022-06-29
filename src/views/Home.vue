@@ -1,6 +1,10 @@
 <template>
   <v-card class="mx-auto">
+    
     <v-card-title>
+      <v-avatar tile>
+        <v-img :src="sheild" contain max-height="50"></v-img>
+      </v-avatar>
       {{ appTitle }}
     </v-card-title>
 
@@ -70,7 +74,7 @@
           each user.
         </v-card-text>
 
-        <v-simple-table>
+        <v-simple-table class="rounded-lg px-5 mx-5">
           <template v-slot:default>
             <thead>
               <tr>
@@ -124,6 +128,7 @@ export default {
   data() {
     return {
       appTitle: process.env.VUE_APP_TITLE,
+      sheild: require('../assets/shield.svg'),
       applications: [
         {
           name: 'Sample React SPA',
