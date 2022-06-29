@@ -3,7 +3,7 @@
 		<navigation></navigation>
 		
 		<v-fade-transition mode="out-in" duration type="animation">
-			<v-main dark>		
+			<v-main class="grey lighten-2">		
 				<v-container fluid>
 					<v-layout align-center justify-center>
 						<v-flex>
@@ -49,9 +49,3 @@ export default {
 	}
 }
 </script>
-
-<style scoped>
-	main {
-		background: #797979;
-	}
-</style>
