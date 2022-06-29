@@ -7,7 +7,7 @@
 			</v-btn>
 			
       <v-toolbar-title >
-				{{ appTitle }}
+				Pre-Sales Demonstration
 			</v-toolbar-title>
 
 			<v-spacer></v-spacer>
