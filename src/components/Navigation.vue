@@ -2,7 +2,7 @@
 	<div>
 		<!-- Application bar -->
 		<v-app-bar app clipped-left dark class="primary accent-4">
-			<v-btn plain float-left max-height="50" href="https://auth0.com/" target="__blank">
+			<v-btn plain float-left max-height="50" :href="oktahomeURL" target="__blank">
 				<v-img :src="logo" contain max-height="50"></v-img>
 			</v-btn>
 			
@@ -13,7 +13,7 @@
 			<v-spacer></v-spacer>
 
 			<v-toolbar-items>
-				<v-btn plain max-height="50" href="https://auth0.com/docs" target="__blank">
+				<v-btn plain max-height="50" :href="auth0docsURL" target="__blank">
 					<v-img :src="auth0docs" contain max-height="50"></v-img>
 				</v-btn>
 			</v-toolbar-items>
@@ -96,6 +96,8 @@ export default {
 		appTitle: process.env.VUE_APP_TITLE,
 		logo: require('../assets/okta-logo-white.svg'),
 		auth0docs: require('../assets/auth0docs.svg'),
+		oktahomeURL: 'https://www.okta.com/',
+		auth0docsURL: 'https://auth0.com/docs'
 	}),
 	computed: {
 		routes() {
