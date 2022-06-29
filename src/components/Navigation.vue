@@ -94,8 +94,6 @@ export default {
 	name: 'Navigation',
 	data: () => ({
 		appTitle: process.env.VUE_APP_TITLE,
-		shieldSRC: 'https://cdn.auth0.com/manhattan/versions/1.3435.0/assets/./badge.png',
-		// logo: require('../assets/shield.svg'),
 		logo: require('../assets/okta-logo-white.svg'),
 		auth0docs: require('../assets/auth0docs.svg'),
 	}),

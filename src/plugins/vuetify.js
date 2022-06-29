@@ -5,7 +5,7 @@ import colors from 'vuetify/lib/util/colors'
 Vue.use(Vuetify);
 
 const oktaBlue = '#07297a'
-const lightBlue = '#007DC1' // '#6d88c7'
+const lightBlue = '#007DC1'
 const defaults = {
   primary: '#1976D2',
   secondary: '#424242',
@@ -39,10 +39,6 @@ export default new Vuetify({
         secondary: lightBlue,
         accent: colors.blue.base,
         lightgrey: colors.grey.lighten2
-        // info: colors.blueGrey.lighten3,
-        // success: colors.green.lighten1,
-        // warning: colors.yellow,
-        // error: colors.red.darken3,
       }
     }
   },
