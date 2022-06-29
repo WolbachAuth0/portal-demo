@@ -1,8 +1,11 @@
 <template>
   <v-card>
     <v-card-title>
-      <v-avatar>
+      <v-avatar tile v-if="logoIsAvailable">
         <img :src="logo_uri" :alt="name" />
+      </v-avatar>
+      <v-avatar tile v-else>
+        <v-progress-circular :size="40" color="primary" indeterminate></v-progress-circular>
       </v-avatar>
       {{ name }}
     </v-card-title>
@@ -45,6 +48,11 @@ export default {
     pretty: function(value) {
       return JSON.stringify(JSON.parse(value), null, 2);
     }
+  },
+  computed: {
+    logoIsAvailable () {
+      return this.logo_uri !== 'logo-uri'
+    } 
   },
   async beforeMount () {
     const response = await this.getClient()
