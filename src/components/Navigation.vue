@@ -39,7 +39,7 @@
 				</v-list-item>
 
 				<v-list-item v-else class="px-2" link @click="authenticate()" >
-					<v-list-item-avatar color="primary">
+					<v-list-item-avatar color="secondary">
 						<v-icon x-large>{{ mdiAccountCircle }}</v-icon>
 					</v-list-item-avatar>
 					<v-list-item-content>
