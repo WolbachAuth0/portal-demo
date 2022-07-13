@@ -3,7 +3,8 @@
 		<navigation></navigation>
 		
 		<v-fade-transition mode="out-in" duration type="animation">
-			<v-main class="grey lighten-2">		
+			<!-- <v-main class="grey lighten-2"> -->
+				<v-main class="darkgrey" light>
 				<v-container fluid>
 					<v-layout align-center justify-center>
 						<v-flex>
@@ -49,3 +50,9 @@ export default {
 	}
 }
 </script>
+
+<style scoped>
+	main.darkgrey {
+		background-color: #757892;
+	}
+</style>

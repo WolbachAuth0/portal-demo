@@ -3,9 +3,14 @@ import Vuetify from 'vuetify/lib/framework';
 import colors from 'vuetify/lib/util/colors'
 
 Vue.use(Vuetify);
+const okta = {
+  blue: '#07297a',
+  lightblue: '#007DC1',
+  darkblue: '#151a66',
+  grey: '#757892',
+  lightgrey: '#e4e5ed'
+}
 
-const oktaBlue = '#07297a'
-const lightBlue = '#007DC1'
 const defaults = {
   primary: '#1976D2',
   secondary: '#424242',
@@ -30,15 +35,16 @@ export default new Vuetify({
         success: colors.green.darken1,
         warning: colors.yellow.lighten4,
         error: colors.red.lighten4,
-        greyLighten4: colors.grey.lighten4
+        
       },
       light: {
         background: colors.grey.lighten5,
         surface: colors.grey.lighten4,
-        primary: oktaBlue,
-        secondary: lightBlue,
+        primary: okta.darkblue,
+        secondary: okta.lightblue,
         accent: colors.blue.base,
-        lightgrey: colors.grey.lighten2
+        lightgrey: okta.lightgrey,
+        darkgrey: okta.darkgrey
       }
     }
   },

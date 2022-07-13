@@ -8,8 +8,8 @@
       {{ appTitle }}
     </v-card-title>
 
-    <v-sheet class="blue lighten-5">
-    
+    <!-- <v-sheet class="blue lighten-5"> -->
+    <v-sheet class="grey-purple">
       <div v-if="$auth.isAuthenticated">
         <v-card-subtitle>
           <v-avatar>
@@ -190,3 +190,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .grey-purple {
+    background-color: #e4e5ed;
+  }
+</style>
