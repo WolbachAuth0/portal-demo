@@ -2,21 +2,21 @@
 	<div>
 		<!-- Application bar -->
 		<v-app-bar app clipped-left dark class="primary accent-4">
-			<v-btn plain float-left max-height="50" :href="oktahomeURL" target="__blank">
-				<v-img :src="logo" contain max-height="50"></v-img>
-			</v-btn>
-			
+			<a id="logo" :href="oktahomeURL" target="__blank">
+				<v-img :src="logo" contain max-height="50" max-width="225"></v-img>
+			</a>
+
       <v-toolbar-title >
 				Pre-Sales Demonstration
 			</v-toolbar-title>
 
 			<v-spacer></v-spacer>
 
-			<v-toolbar-items>
-				<v-btn plain max-height="50" :href="auth0docsURL" target="__blank">
-					<v-img :src="auth0docs" contain max-height="50"></v-img>
-				</v-btn>
-			</v-toolbar-items>
+			<v-toolbar-title>
+				<a id="auth0docs" :href="auth0docsURL" target="__blank">
+					<v-img :src="auth0docs" contain max-height="64"></v-img>
+				</a>
+			</v-toolbar-title>
 		</v-app-bar>
 
 		<!-- Navigation Drawer -->
